@@ -10,7 +10,7 @@ class Solution:
         pass
 
     def build(self, pre, inorder):
-        if len(pre) == 0:
+        if len(pre) == 0 or len(pre) != len(inorder):
             return
         root = Node(pre[0])
         mid = inorder.index(pre[0])
