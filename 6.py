@@ -24,3 +24,4 @@ if __name__ == '__main__':
     inorder = [4, 7, 2, 1, 5, 3, 8, 6]
     solution = Solution()
     tree = solution.build(preorder, inorder)
+    print('done')
