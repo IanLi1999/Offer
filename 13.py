@@ -11,6 +11,11 @@ class NodeList:
         temp = node.next
 
         if temp == None:
+            if self.head == node:
+                self.head = None
+                del(node)
+                return
+
             cur = self.head
             while cur.next != node:
                 cur = cur.next
@@ -51,5 +56,8 @@ if __name__ == '__main__':
     demo.deleteNode(nodes[0])
     demo.print_list()
 
-    
-    
+    head2 = Node(1)
+    demo = NodeList(head2)
+    demo.deleteNode(head2)
+    demo.print_list()
+
